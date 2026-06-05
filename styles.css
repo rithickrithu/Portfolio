@@ -414,15 +414,22 @@ a:hover {
     transition: left 0.5s;
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 0, 60, 0.6);
-    background: #e60036;
+@media (hover: hover) and (pointer: fine) {
+    .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(255, 0, 60, 0.6);
+        background: #e60036;
+    }
+    .btn-primary:hover::before {
+        left: 150%;
+    }
+    .btn-outline:hover {
+        background: rgba(0, 243, 255, 0.1);
+        color: var(--accent-secondary) !important;
+        transform: translateY(-3px);
+        box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+    }
 }
-.btn-primary:hover::before {
-    left: 150%;
-}
-
 .btn-primary:active {
     animation: glitch-anim 0.2s linear;
 }
@@ -431,13 +438,6 @@ a:hover {
     background: transparent;
     color: var(--text-primary) !important;
     border: 2px solid var(--accent-secondary);
-}
-
-.btn-outline:hover {
-    background: rgba(0, 243, 255, 0.1);
-    color: var(--accent-secondary) !important;
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
 }
 
 /* About Section */
@@ -574,10 +574,18 @@ a:hover {
     transition: transform 0.3s;
 }
 
-.tab-btn:hover, .tab-btn.active {
+.tab-btn.active {
     background: rgba(255,255,255,0.05);
     color: var(--text-primary);
     border-color: rgba(255, 75, 43, 0.3);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .tab-btn:hover {
+        background: rgba(255,255,255,0.05);
+        color: var(--text-primary);
+        border-color: rgba(255, 75, 43, 0.3);
+    }
 }
 
 .tab-btn.active::before {
@@ -1042,6 +1050,9 @@ footer p {
         align-items: center;
         text-align: center;
     }
+    .project-details-panel {
+        text-align: left;
+    }
     .skills-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -1060,6 +1071,12 @@ footer p {
 @media (max-width: 768px) {
     .section {
         padding: 60px 5%;
+    }
+    .home {
+        padding-top: 150px;
+    }
+    .hanging-spider {
+        display: none;
     }
     .nav-links {
         position: fixed;
