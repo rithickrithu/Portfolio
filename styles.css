@@ -430,9 +430,6 @@ a:hover {
         box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
     }
 }
-.btn-primary:active {
-    animation: glitch-anim 0.2s linear;
-}
 
 .btn-outline {
     background: transparent;
@@ -1050,7 +1047,7 @@ footer p {
         align-items: center;
         text-align: center;
     }
-    .project-details-panel {
+    .project-details-panel, .contact-info {
         text-align: left;
     }
     .skills-grid {
