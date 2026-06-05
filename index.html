@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K V Rithick | Android Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Devicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background Elements -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    <!-- User Uploaded Spider Emblem Background -->
+    <img src="user_spidey_2.png" class="bg-spider-logo" alt="Spider Emblem">
+
+    <!-- 3D Canvas Background -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="logo">KVR.</div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-btn"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+    <section id="home" class="hero section">
+        <div class="hanging-spider">
+            <div class="web-line"></div>
+            <img src="user_spidey_3.png" class="hero-hanging-img" alt="Hanging Spider">
+        </div>
+        <div class="hero-content">
+                <span class="subtitle">Welcome to my Portfolio</span>
+                <h1 class="title">I'm <span>K V Rithick</span></h1>
+                <h2 class="dynamic-text">
+                    <span class="text-wrapper"></span><span class="cursor">|</span>
+                </h2>
+                <p class="description">
+                    Designing and delivering scalable, performant Android applications. Passionate about Kotlin, Jetpack Compose, and building dynamic JSON-driven mobile architectures.
+                </p>
+                <div class="btn-group">
+                    <a href="#experience" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
+                    <a href="Rithick_KV.pdf" download="Rithick_KV.pdf" class="btn btn-outline">Download CV <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="hero-canvas-container"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-photo-wrapper">
+                    <div class="photo-frame">
+                        <img src="IMG_20260214_204817_456.webp" alt="K V Rithick">
+                        <div class="photo-glow"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                <p><strong>Android Developer</strong> with 2+ years of experience building scalable enterprise applications for Verizon Communications, specializing in Kotlin, Jetpack Compose, and API-driven UI architectures.</p>
+                <p>I am passionate about building modern declarative UIs and architecting robust applications. In my journey from Tech Mahindra to Geidea, I have successfully delivered high-impact mobile solutions across payment systems, eCommerce, and enterprise platforms.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card glass-card">
+                    <div class="stat-num">2+</div>
+                    <div class="stat-label">Years Exp</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-num">3</div>
+                    <div class="stat-label">Companies</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-num">5+</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="experience-layout">
+                <!-- Left Tabs -->
+                <div class="company-tabs">
+                    <button class="tab-btn active" data-project="geidea">
+                        <div class="role-title">Android Developer</div>
+                        <div class="comp-name">Geidea</div>
+                        <div class="comp-date">Present</div>
+                    </button>
+                    <button class="tab-btn" data-project="techmahindra">
+                        <div class="role-title">Software Engineer</div>
+                        <div class="comp-name">Tech Mahindra</div>
+                        <div class="comp-date">Mar 2024 – Mar 2026</div>
+                    </button>
+                    <button class="tab-btn" data-project="atdxt">
+                        <div class="role-title">Software Eng - Full Stack</div>
+                        <div class="comp-name">ATDXT LLC</div>
+                        <div class="comp-date">Dec 2023 – Mar 2024</div>
+                    </button>
+                </div>
+
+                <!-- Right Detail Panel -->
+                <div class="project-details-panel glass-card">
+                    
+                    <!-- Geidea -->
+                    <div class="project-panel active" id="geidea">
+                        <div class="panel-header">
+                            <span class="proj-client">Bengaluru, Karnataka, India</span>
+                            <h3 class="proj-name">Geidea</h3>
+                            <div class="proj-meta">
+                                <span><i class="fas fa-briefcase"></i> Android Developer</span>
+                                <span><i class="fas fa-calendar-alt"></i> April 2026 - Present (3 months)</span>
+                            </div>
+                        </div>
+                        <div class="panel-body-grid">
+                            <ul class="project-duties mt-4">
+                                <li>Working on GeideaStore, a custom app distribution platform (similar to Google Play Store) built exclusively for PAX smart POS terminals.</li>
+                                <li>Architecting the store app using Kotlin, managing complex download and installation workflows for merchants.</li>
+                                <li>Handling secure API integrations, dynamic app catalog rendering, and low-level POS device interactions to ensure a seamless app management experience.</li>
+                            </ul>
+                            <div class="tech-badges-list mt-4">
+                                <span class="tech-badge">Kotlin</span>
+                                <span class="tech-badge">Android SDK</span>
+                                <span class="tech-badge">PAX Hardware</span>
+                                <span class="tech-badge">App Distribution</span>
+                                <span class="tech-badge">POS Integration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Mahindra -->
+                    <div class="project-panel" id="techmahindra">
+                        <div class="panel-header">
+                            <span class="proj-client">Chennai, Tamil Nadu, India</span>
+                            <h3 class="proj-name">VBG Digital Mobile Apps & Firsty</h3>
+                            <div class="proj-meta">
+                                <span><i class="fab fa-android"></i> Software Engineer</span>
+                                <span><i class="fas fa-calendar-alt"></i> March 2024 - March 2026 (2 years)</span>
+                            </div>
+                        </div>
+                        <div class="panel-body-grid">
+                            <h4 class="mt-4 text-cyan" style="margin-bottom: 10px;">Project 1: VBG Digital Mobile Apps (Verizon)</h4>
+                            <ul class="project-duties">
+                                <li>Contributed to customer-facing applications MVB (Mobile Verizon Business) and SMB (Small & Medium Business) used by millions of users.</li>
+                                <li>Developed multiple Android modules and UI screens using MVP architecture with Kotlin, Java, XML, and Jetpack Compose.</li>
+                                <li>Implemented dynamic JSON-driven UI rendering in SMB enabling backend-controlled UI updates without app releases.</li>
+                                <li>Integrated REST APIs using Volley, implementing caching strategies and robust error handling.</li>
+                                <li>Monitored application performance and logs using Kibana and New Relic, identifying and resolving production issues.</li>
+                            </ul>
+                            
+                            <h4 class="mt-4 text-cyan" style="margin-bottom: 10px;">Project 2: Firsty Android Application</h4>
+                            <ul class="project-duties">
+                                <li>Developed an Android platform for reading and listening to eBooks and audiobooks with both online and offline access.</li>
+                                <li>Implemented MVVM architecture using Kotlin, ViewModel, LiveData, Room, and WorkManager.</li>
+                                <li>Built modern declarative UI using Jetpack Compose with smooth animations and responsive layouts.</li>
+                                <li>Integrated REST APIs and WebSockets to support real-time content updates.</li>
+                                <li>Integrated Firebase Crashlytics, Analytics, and FCM for monitoring, analytics, and push notifications.</li>
+                            </ul>
+
+                            <div class="tech-badges-list mt-4">
+                                <span class="tech-badge">Kotlin</span>
+                                <span class="tech-badge">Java</span>
+                                <span class="tech-badge">MVVM & MVP</span>
+                                <span class="tech-badge">Jetpack Compose</span>
+                                <span class="tech-badge">Room</span>
+                                <span class="tech-badge">Hilt</span>
+                                <span class="tech-badge">Volley & Retrofit</span>
+                                <span class="tech-badge">WebSockets</span>
+                                <span class="tech-badge">Firebase</span>
+                                <span class="tech-badge">New Relic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ATDXT -->
+                    <div class="project-panel" id="atdxt">
+                        <div class="panel-header">
+                            <span class="proj-client">Coimbatore, Tamil Nadu, India</span>
+                            <h3 class="proj-name">Software Engineer - Full stack developer</h3>
+                            <div class="proj-meta">
+                                <span><i class="fas fa-server"></i> ATDXT LLC</span>
+                                <span><i class="fas fa-calendar-alt"></i> Dec 2023 - March 2024 (4 months)</span>
+                            </div>
+                        </div>
+                        <div class="panel-body-grid">
+                            <ul class="project-duties mt-4">
+                                <li>Designed and developed full-stack enterprise web applications focusing on scalable architecture and efficient data management.</li>
+                                <li>Built an Employee Management System to streamline employee record management, role-based access, and operational workflows.</li>
+                                <li>Developed responsive and dynamic user interfaces using React.js.</li>
+                                <li>Implemented robust backend services using Spring Boot, designing and exposing RESTful APIs.</li>
+                                <li>Architected seamless frontend–backend integration, enabling efficient data flow.</li>
+                                <li>Containerized the application using Docker and deployed it on AWS, configuring Nginx as a reverse proxy.</li>
+                                <li>Applied best practices in software development lifecycle (SDLC) including debugging, version control using Git.</li>
+                            </ul>
+                            <div class="tech-badges-list mt-4">
+                                <span class="tech-badge">Java</span>
+                                <span class="tech-badge">React.js</span>
+                                <span class="tech-badge">Spring Boot</span>
+                                <span class="tech-badge">REST APIs</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">AWS</span>
+                                <span class="tech-badge">Nginx</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section (Animated Grid) -->
+        <section id="skills" class="section">
+            <h2 class="section-title text-center" style="display: block;">Technical Arsenal</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-category glass-card">
+                    <h3><i class="fab fa-android text-cyan"></i> Android & Kotlin</h3>
+                    <ul class="skill-list interactive-game-list">
+                        <li>Kotlin & Java</li>
+                        <li>Jetpack Compose</li>
+                        <li>MVVM / MVP</li>
+                        <li>Android SDK</li>
+                        <li>Room Database</li>
+                        <li>Hilt / Dagger</li>
+                        <li>Volley & Retrofit</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-server text-purple"></i> Web & Backend</h3>
+                    <ul class="skill-list interactive-game-list">
+                        <li>React.js</li>
+                        <li>Spring Boot</li>
+                        <li>RESTful APIs</li>
+                        <li>JSON Data Binding</li>
+                        <li>SQL Databases</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-tools text-pink"></i> Tools & Cloud</h3>
+                    <ul class="skill-list interactive-game-list">
+                        <li>Agile Methodologies</li>
+                        <li>New Relic</li>
+                        <li>Docker & AWS</li>
+                        <li>Firebase (Crashlytics, FCM)</li>
+                        <li>Jenkins / GitLab CI</li>
+                        <li>PAX POS Terminals</li>
+                        <li>Git & GitHub</li>
+                        <li>Nginx</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section education-section">
+            <h3 class="col-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+            <div class="edu-grid">
+                <div class="edu-card glass-card">
+                    <h4>B.E - Computer Science Engineering</h4>
+                    <p>Anna University Regional Campus, Coimbatore</p>
+                    <div class="score">2019 - 2023 | CGPA: 8.84</div>
+                </div>
+                <div class="edu-card glass-card">
+                    <h4>HSC</h4>
+                    <p>SVGV Matric Higher Secondary School, Karamadai</p>
+                    <div class="score">Completed: 2019 | Percentage: 89.6%</div>
+                </div>
+                <div class="edu-card glass-card">
+                    <h4>SSLC</h4>
+                    <p>Sri Giri Eswara Matriculation School, Kagguchi</p>
+                    <div class="score">Completed: 2017 | Percentage: 98%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section certifications-section">
+            <h3 class="col-title"><i class="fas fa-award"></i> Trophies & Certifications</h3>
+            <div class="cert-grid">
+                <div class="achieve-card glass-card">
+                    <i class="fas fa-robot award-icon text-cyan"></i>
+                    <div>
+                        <strong>Microsoft Certified: Azure AI Engineer Associate</strong>
+                        <p>Microsoft</p>
+                    </div>
+                </div>
+
+                <div class="achieve-card glass-card">
+                    <i class="fas fa-brain award-icon text-purple"></i>
+                    <div>
+                        <strong>AI White Belt Certification</strong>
+                        <p>Artificial Intelligence & Prompt Engineering</p>
+                    </div>
+                </div>
+
+                <div class="achieve-card glass-card">
+                    <i class="fas fa-network-wired award-icon text-pink"></i>
+                    <div>
+                        <strong>AI Blue Belt Certification</strong>
+                        <p>Advanced AI Applications & Integrations</p>
+                    </div>
+                </div>
+
+                <div class="achieve-card glass-card">
+                    <i class="fas fa-mobile-alt award-icon text-cyan"></i>
+                    <div>
+                        <strong>Android Jetpack Compose: The Comprehensive Bootcamp</strong>
+                        <p>Udemy / External</p>
+                    </div>
+                </div>
+
+                <div class="achieve-card glass-card">
+                    <i class="fab fa-android award-icon text-purple"></i>
+                    <div>
+                        <strong>Android App Development with Kotlin</strong>
+                        <p>Udemy / External</p>
+                    </div>
+                </div>
+
+                <div class="achieve-card glass-card">
+                    <i class="fab fa-js award-icon text-pink"></i>
+                    <div>
+                        <strong>Modern Java Script for React JS - ES6</strong>
+                        <p>Web Development</p>
+                    </div>
+                </div>
+
+                <div class="achieve-card glass-card">
+                    <i class="fab fa-java award-icon text-cyan"></i>
+                    <div>
+                        <strong>Java for Beginners</strong>
+                        <p>Programming Foundation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <img src="user_spidey_1.png" class="bg-movie-spidey spidey-character-4" alt="Red Spider-Man">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info glass-card">
+                    <h3>Let's Connect</h3>
+                    <p>Whether you have a question, want to collaborate on a project, or just want to say hi, feel free to reach out!</p>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:rithick502@gmail.com">rithick502@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 9360273339</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <a href="https://in.linkedin.com/in/rithick-k-v-701067222" target="_blank">in.linkedin.com/in/rithick-k-v-701067222</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Ooty, Tamil Nadu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form glass-card text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px;">
+                    <i class="fas fa-paper-plane text-cyan" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                    <h3 style="margin-bottom: 15px;">Ready to collaborate?</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 30px;">Drop me an email and I will get back to you as soon as possible.</p>
+                    <a href="mailto:rithick502@gmail.com" class="btn btn-primary" style="font-size: 1.2rem; padding: 15px 40px;">Say Hello <i class="fas fa-arrow-right" style="margin-left: 10px;"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 K V Rithick. All Rights Reserved. Crafted with passion.</p>
+        <div class="footer-socials">
+            <a href="https://github.com/rithickrithu" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://in.linkedin.com/in/rithick-k-v-701067222" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    <!-- Removed broken spider-man background images -->
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
