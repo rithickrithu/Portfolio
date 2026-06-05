@@ -85,6 +85,7 @@ a:hover {
     animation: spider-swing 4s ease-in-out infinite alternate;
     transform-origin: top center;
     z-index: 90;
+    pointer-events: none;
 }
 
 .hanging-spider .web-line {
@@ -317,9 +318,10 @@ a:hover {
     padding-top: 150px;
 }
 
-.home-content {
+.hero-content {
     max-width: 800px;
-    z-index: 10;
+    z-index: 50;
+    position: relative;
 }
 
 .subtitle {
@@ -391,6 +393,7 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
+    z-index: 100;
     overflow: hidden;
 }
 
@@ -557,6 +560,7 @@ a:hover {
     color: var(--text-secondary);
     transition: all 0.3s;
     position: relative;
+    z-index: 100;
     overflow: hidden;
 }
 
@@ -1029,11 +1033,18 @@ footer p {
 
 /* Responsive */
 @media (max-width: 992px) {
+    .section {
+        padding: 80px 5%;
+    }
     .about-grid, .experience-layout, .contact-wrapper, .hud-header {
         grid-template-columns: 1fr;
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     .hud-bars { margin-top: 20px; }
     .company-tabs {
@@ -1047,6 +1058,9 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    .section {
+        padding: 60px 5%;
+    }
     .nav-links {
         position: fixed;
         top: 85px; left: 0;
@@ -1066,9 +1080,45 @@ footer p {
         display: block;
     }
     .section-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     .title {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
+    }
+    .btn-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .hero-content {
+        text-align: center;
+    }
+    .description {
+        border-left: none;
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .proj-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+    .stat-card {
+        min-width: 100%;
+    }
+    .contact-wrapper {
+        gap: 30px;
+    }
+    .edu-grid, .cert-grid {
+        grid-template-columns: 1fr;
     }
 }
